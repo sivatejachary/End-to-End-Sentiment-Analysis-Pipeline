@@ -9,10 +9,15 @@ This repository contains a sentiment analysis pipeline for IMDb movie reviews. T
 ### 1. **Code Repository**
 The repository contains the following files:
 
-- **`data_setup.py`**: Script to set up the database and load the dataset.
-- **`train_model.py`**: Script for training the logistic regression model.
-- **`app.py`**: A simple Flask application to serve the model and predict sentiment.
-- **`requirements.txt`**: List of all Python dependencies.
+- **`data_setup.py`**: Script to set up the SQLite database and load the IMDb dataset into the database.
+- **`train_model.py`**: Script for training the logistic regression model on the IMDb dataset.
+- **`logistic_regression_model.pkl`**: Saved Logistic Regression model after training.
+- **`tfidf_vectorizer.pkl`**: Saved TF-IDF vectorizer used for transforming the text data.
+- **`app.py`**: A simple Flask application to serve the sentiment analysis model.
+- **`requirements.txt`**: A list of Python dependencies.
+- **`imdb_reviews.db`**: SQLite database containing the IMDb reviews.
+- **`README.md`**: Project documentation.
+- **`.gitignore`**: Git ignore file for Python-related files.
 
 ### 2. **Database Schema**
 
@@ -40,8 +45,8 @@ The repository contains the following files:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/imdb-sentiment-analysis.git
-    cd imdb-sentiment-analysis
+    git clone [https://github.com/yourusername/imdb-sentiment-analysis](https://github.com/sivatejachary/End-to-End-Sentiment-Analysis-Pipeline.git
+    cd End-to-End-Sentiment-Analysis-Pipeline
     ```
 
 2. **Install dependencies:**
@@ -98,7 +103,39 @@ The repository contains the following files:
     ```
 
 ---
+- **Python Code to Test the Model**:
+      You can also use the following Python script to test the model via a `POST` request to the Flask server:
 
+      ```python
+      import requests
+      import json
+
+      # The URL of your Flask app
+      url = 'http://127.0.0.1:5000/predict'
+
+      # Review text to send in the POST request
+      data = {
+          "review_text": "This movie was waste of time"
+      }
+
+      # Send the POST request
+      response = requests.post(url, json=data)
+
+      # Print the raw response text to debug
+      print(f"Raw response: {response.text}")
+
+      # Attempt to print the JSON response
+      try:
+          print(response.json())
+      except Exception as e:
+          print(f"Error while decoding JSON: {e}")
+      ```
+
+      **Explanation:**
+      - The script sends a `POST` request to the Flask app with a review text.
+      - It then prints the raw response from the Flask server and attempts to decode the response into JSON format.
+
+---
 #### **Model Info**
 
 - **Chosen Model Approach**: Logistic Regression was selected as the classifier for sentiment analysis.
