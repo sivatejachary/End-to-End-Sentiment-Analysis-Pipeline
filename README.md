@@ -1,5 +1,4 @@
 # End-to-End-Sentiment-Analysis-Pipeline
-# IMDb Sentiment Analysis with Logistic Regression
 
 This repository contains a sentiment analysis pipeline for IMDb movie reviews. The project is implemented in Python and uses a **Logistic Regression** model to classify movie reviews as **positive** or **negative**. The pipeline is connected to an SQLite database (`imdb_reviews.db`) containing the review data.
 
@@ -114,15 +113,15 @@ The repository contains the following files:
 ## **File Structure**
 
 
-├── data_setup.py # Script to load data into the database 
-├── train_model.py # Script to train the Logistic Regression model
-└──logistic_regression_model.pkl
-└──tfidf_vectorizer.pkl
-├── app.py # Flask app for serving the model 
-├── requirements.txt # Python dependencies 
-├── imdb_reviews.db # SQLite database with the movie reviews 
-├── README.md # Project documentation 
-└── .gitignore # Git ignore file for Python-related files
+├── data_setup.py # Script to load data into the database. 
+├── train_model.py # Script to train the Logistic Regression model.
+└──logistic_regression_model.pkl.
+└──tfidf_vectorizer.pkl.
+├── app.py # Flask app for serving the model.
+├── requirements.txt # Python dependencies. 
+├── imdb_reviews.db # SQLite database with the movie reviews. 
+├── README.md # Project documentation. 
+└── .gitignore # Git ignore file for Python-related files.
 
 
 ---
