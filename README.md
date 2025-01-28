@@ -109,21 +109,6 @@ The repository contains the following files:
     - F1-Score: **87.51%**
 
 ---
-
-## **File Structure**
-
-
-├── data_setup.py # Script to load data into the database. 
-├── train_model.py # Script to train the Logistic Regression model.
-└──logistic_regression_model.pkl.
-└──tfidf_vectorizer.pkl.
-├── app.py # Flask app for serving the model.
-├── requirements.txt # Python dependencies. 
-├── imdb_reviews.db # SQLite database with the movie reviews. 
-├── README.md # Project documentation. 
-└── .gitignore # Git ignore file for Python-related files.
-
-
 ---
 
 ## **Requirements**
