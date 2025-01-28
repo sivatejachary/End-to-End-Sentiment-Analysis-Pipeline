@@ -106,7 +106,7 @@ The repository contains the following files:
 - **Python Code to Test the Model**:
       You can also use the following Python script to test the model via a `POST` request to the Flask server:
 
-      ```python
+  ```python
       import requests
       import json
 
@@ -129,9 +129,9 @@ The repository contains the following files:
           print(response.json())
       except Exception as e:
           print(f"Error while decoding JSON: {e}")
-      ```
+  ```
 
-      **Explanation:**
+  **Explanation:**
       - The script sends a `POST` request to the Flask app with a review text.
       - It then prints the raw response from the Flask server and attempts to decode the response into JSON format.
 
